@@ -3,9 +3,10 @@
 #Overview
 
 ##Technologies
- Java 
-  OOP
- Eclipse
- Git
+
+ - Java 
+   -  OOP
+ - Eclipse
+ - Git
 
 ##Lesson Learned
