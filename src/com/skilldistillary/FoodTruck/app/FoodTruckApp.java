@@ -34,6 +34,7 @@ public class FoodTruckApp {
 			FoodTruck newTruck = new FoodTruck(truckName, truckFood, truckRate);
 			fleet[i] = newTruck;
 			kb.nextLine();
+			
 		}
 
 		int userSelection = 0;
@@ -85,18 +86,16 @@ public class FoodTruckApp {
 	}
 
 	private void findMax() {
-		int max = fleet[0].getRating();
 
+		int max = fleet[0].getRating();
+		String winner = fleet[0].toString();
+		
 		for (int i = 0; i < fleet.length; i++) {
-			if (fleet[i] != null) {
-				if (fleet[i].getRating() > max) {
-					max = fleet[i].getRating();
-				}
-				if (fleet[i].getRating() == max) {
-					System.out.println(fleet[i].toString());
-				}
+			if (fleet[i] != null && fleet[i].getRating() > max) {
+					winner = fleet[i].toString();
 			}
 		}
+		System.out.println(winner);
 	}
 
 	public void welcomeMessage() {

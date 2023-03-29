@@ -1,10 +1,12 @@
 package com.skilldistillary.FoodTruck.entities;
 
 public class FoodTruck {
+	private int truckId;
 	private String name;
 	private String foodType;
 	private int rating;
-	private final int truckId = (int) (Math.random() * (100-10) +10);
+	private static int truckIdCounter;
+	//private final int truckId = (int) (Math.random() * (100-10) +10);
 	
 //----------------Object/Object fields----------------------------------
 
@@ -12,6 +14,9 @@ public class FoodTruck {
 		this.name = name;
 		this.foodType = foodType;
 		this.rating = rating;
+		
+		truckIdCounter++;
+		truckId = truckIdCounter;
 	}
 
 	public FoodTruck() {
